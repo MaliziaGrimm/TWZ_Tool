@@ -1,0 +1,242 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<title>{{v_version_titel}}</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="../static/bewerber.ico" type="image/x-icon" />
+<link rel="stylesheet" href="../static/w3.css">
+<link rel="stylesheet" href="../static/bootstrap.min.css">
+<link rel="stylesheet" href="../static/dna-theme.css">
+<link rel="stylesheet" href="../static/format.css">
+<!-- fertig 26.12.2020 -->
+</head>
+
+<body>
+
+<!-- Header -->
+
+<div class="w3-row-padding">
+  <header class="card">
+    <center><h3>{{v_version_program}}</h3></center>
+  </header>
+</div>
+<br>
+<!--Navigation-->
+<div class="w3-container">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Runden</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="rundeneu.html">Runde neu</a>
+                <a class="dropdown-item" href="ergebnis.html">Ergebnis eintragen</a>
+                <a class="dropdown-item" href="rundebeenden.html">Runde beenden</a>
+            </div>
+        </li>
+        <!-- Navigation nur Home -->
+    </ul>
+</div>
+
+<br>
+
+<div class="w3-row-padding">
+    <div class="w3-row-padding">
+    <br>
+        <form action="http://localhost:17102/rundeneu.html" class="w3-container w3-card-4 w3-round" , method="POST">
+            <div class="w3-third">
+                <h3>&nbsp;</h3>
+            </div>
+            <div class="w3-third">
+                <h3><center>Paarungen manuell erfassen</center></h3>
+            </div>
+            <div class="w3-third">
+                <h3>&nbsp;</h3>
+                <br>
+            </div>
+
+            <div class="w3-row-padding">
+                <div class="w3-col l2 w3-left">
+                    <p><label>Brett 1 Weiss</label></p>
+                </div>
+                <input class="w3-col l1 w3-input w3-border" type="text" name="form_brett1w" maxlength="2">
+                <div class="w3-col l2 w3-left">
+                    <p><label>Brett 1 Schwarz</label></p>
+                </div>
+                <input class="w3-col l1 w3-input w3-border" type="text" name="form_brett1s" maxlength="2">
+                <div class="w3-col l2 w3-left">
+                    <p><label>Brett 2 Weiss</label></p>
+                </div>
+                <input class="w3-col l1 w3-input w3-border" type="text" name="form_brett2w" maxlength="2">
+                <div class="w3-col l2 w3-left">
+                    <p><label>Brett 2 Schwarz</label></p>
+                </div>
+                <input class="w3-col l1 w3-input w3-border" type="text" name="form_brett2s" maxlength="2">
+            </div>
+            <br>
+
+            <div class="w3-row-padding">
+                <div class="w3-col l2 w3-left">
+                    <p><label>Brett 3 Weiss</label></p>
+                </div>
+                <input class="w3-col l1 w3-input w3-border" type="text" name="form_brett3w" maxlength="2">
+
+                <div class="w3-col l2 w3-left">
+                    <p><label>Brett 3 Schwarz</label></p>
+                </div>
+                <input class="w3-col l1 w3-input w3-border" type="text" name="form_brett3s" maxlength="2">
+
+                <div class="w3-col l2 w3-left">
+                    <p><label>Brett 4 Weiss</label></p>
+                </div>
+                <input class="w3-col l1 w3-input w3-border" type="text" name="form_brett4w" maxlength="2">
+
+                <div class="w3-col l2 w3-left">
+                    <p><label>Brett 4 Schwarz</label></p>
+                </div>
+                <input class="w3-col l1 w3-input w3-border" type="text" name="form_brett4s" maxlength="2">
+            </div>
+            <br>
+
+            <div class="w3-row-padding">
+
+                <div class="w3-col l2 w3-left">
+                    <p><label>Brett 5 Weiss</label></p>
+                </div>
+                <input class="w3-col l1 w3-input w3-border" type="text" name="form_brett5w" maxlength="2">
+
+                <div class="w3-col l2 w3-left">
+                    <p><label>Brett 5 Schwarz</label></p>
+                </div>
+                <input class="w3-col l1 w3-input w3-border" type="text" name="form_brett5s" maxlength="2">
+
+                <div class="w3-col l2 w3-left">
+                    <p><label>Brett 6 Weiss</label></p>
+                </div>
+                <input class="w3-col l1 w3-input w3-border" type="text" name="form_brett6w" maxlength="2">
+
+                <div class="w3-col l2 w3-left">
+                    <p><label>Brett 6 Schwarz</label></p>
+                </div>
+                <input class="w3-col l1 w3-input w3-border" type="text" name="form_brett6s" maxlength="2">
+
+            </div>
+            <br>
+
+            <div class="w3-row-padding">
+
+                <div class="w3-col l2 w3-left">
+                    <p><label>Brett 7 Weiss</label></p>
+                </div>
+                <input class="w3-col l1 w3-input w3-border" type="text" name="form_brett7w" maxlength="2">
+
+                <div class="w3-col l2 w3-left">
+                    <p><label>Brett 7 Schwarz</label></p>
+                </div>
+                <input class="w3-col l1 w3-input w3-border" type="text" name="form_brett7s" maxlength="2">
+
+                <div class="w3-col l2 w3-left">
+                    <p><label>Brett 8 Weiss</label></p>
+                </div>
+                <input class="w3-col l1 w3-input w3-border" type="text" name="form_brett8w" maxlength="2">
+
+                <div class="w3-col l2 w3-left">
+                    <p><label>Brett 8 Schwarz</label></p>
+                </div>
+                <input class="w3-col l1 w3-input w3-border" type="text" name="form_brett8s" maxlength="2">
+
+            </div>
+            <br>
+
+            <div class="w3-row-padding">
+
+                <div class="w3-col l2 w3-left">
+                    <p><label>Brett 9 Weiss</label></p>
+                </div>
+                <input class="w3-col l1 w3-input w3-border" type="text" name="form_brett9w" maxlength="2">
+
+                <div class="w3-col l2 w3-left">
+                    <p><label>Brett 9 Schwarz</label></p>
+                </div>
+                <input class="w3-col l1 w3-input w3-border" type="text" name="form_brett9s" maxlength="2">
+
+                <div class="w3-col l2 w3-left">
+                    <p><label>Brett 10 Weiss</label></p>
+                </div>
+                <input class="w3-col l1 w3-input w3-border" type="text" name="form_brett10w" maxlength="2">
+
+                <div class="w3-col l2 w3-left">
+                    <p><label>Brett 10 Schwarz</label></p>
+                </div>
+                <input class="w3-col l1 w3-input w3-border" type="text" name="form_brett10s" maxlength="2">
+            </div>
+            <br>
+        </div>
+
+        <div class="w3-row-padding"> 
+        <br>
+
+        <div class="w3-row-padding"> 
+            <div class="w3-third">    
+                <center><input type = "submit" button class="btn btn-primary" value = "speichern"/></center><br>
+            </div>
+
+        <div class="w3-third">&NonBreakingSpace;</div>    
+            <div class="w3-third">  
+                <center><input type="reset" button class="btn btn-default" value="verwerfen"></center>
+            </div>
+        <br>
+        </div>
+    </form>
+    </div>
+
+
+  <div class="w3-row-padding">
+    <div class="w3-card">
+      <form class="w3-container w3-card-4 w3-round">
+        <h3>Spielerübersicht</h3>
+        <br>
+        <div class="w3-row-padding">
+            <table>
+                <tr>
+                    <th>Spielernummer</th>
+                    <th>Name</th>
+                    <th>Vorname</th>
+                    <th>Wertzahl</th>
+                    <th>letzter Gegner</th>
+                    <th>vorletzter Gegner</th>
+                    <th>drittletzter Gegner</th>
+                    <th>Partien mit W</th>
+                    <th>Partien mit S</th>
+                    <th>Partien Spielfrei</th>
+                </tr>
+
+                {% for zeile in tabelle %}
+                <tr>
+                    {% for zelle in zeile %}
+                    <td>{{ zelle }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </table>
+          <br><br>
+          </div> 
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="footer">
+    <p><center><H5>ARM-Tools - 2020/2021</H5></center></p>
+  </div>    
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>

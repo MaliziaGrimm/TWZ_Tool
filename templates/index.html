@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<title>{{v_version_titel}}</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="../static/twzico.ico" type="image/x-icon" />
+<link rel="stylesheet" href="../static/w3.css">
+<link rel="stylesheet" href="../static/bootstrap.min.css">
+<link rel="stylesheet" href="../static/dna-theme.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="w3-row-padding">
+        <header class="card">
+            <center><h3>{{v_version_program}}</h3></center>
+        </header>
+    </div>
+    <br>
+
+    <!--Navigation-->
+    <div class="w3-container">
+
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" href="/">Home</a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Spieler</a>
+                <div class="dropdown-menu">
+
+                    <a class="dropdown-item" href="spieler.html">anlegen</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="spieleraktivieren.html">de- oder aktivierenn</a>
+                    <a class="dropdown-item" href="spielerverwalten.html">verwalten*</a>
+                    <a class="dropdown-item" href="spielerkopieren.html">kopieren</a>
+                    <a class="dropdown-item" href="spielerloeschen.html">löschen</a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Runden</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="rundeneu.html">Runde neu</a>
+                    <a class="dropdown-item" href="ergebnis.html">Ergebnis eintragen</a>
+                    <a class="dropdown-item" href="index.html">Runde beenden*</a>
+                    <!-- <a class="dropdown-item" href="rundebeenden.html">Runde beenden</a> -->
+                </div>
+            </li>
+
+<!--            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Turniere</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item disabled" href="#">Turnierverwaltung</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="turnier.html">Turniere anlegen</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="turnier.html">Turniere verwalten</a>
+                    <a class="dropdown-item" href="turnier.html">Turniere löschen</a>
+                </div>
+            </li>
+    -->
+
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Reports</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item disabled" href="astand.html" target="_blank">Turnierstand</a>
+                    <a class="dropdown-item disabled" href="atwzliste.html" target="_blank">TWZ Liste</a>
+
+                </div>
+            </li>
+
+
+        </ul>
+    </div>
+
+    <br>
+
+    <center>
+        <button type="button" class="btn btn-info">
+          {{v_heute}}
+        </button>
+    </center>
+
+    <div class="w3-row-padding">
+        <br>
+        <div class="w3-quarter">
+            <img src="../static/image020.png"><br /><h4>Home</h4><br /> 
+            - Startseite für TWZ Turniere<br /> 
+            <br />
+            &nbsp;
+        </div>
+
+        <div class="w3-quarter">
+            <img src="../static/image002.png"><br /><h4>Spieler</h4><br />
+           
+            - Anlage der Spieler/Teilnehmer<br />
+            - Aktivieren und Deaktivieren der Teilnehmer<br>
+            - Teilnehmer verwalten (nn aktiv)<br />
+            - Teilnehmer kopieren<br>
+            - Teilnehmer löschen<br>
+            &nbsp;
+        </div>
+
+        <div class="w3-quarter">
+            <img src="../static/image020.png"><br /><h4>Runden</h4><br />
+            - Runden neu setzen<br>
+            - Ergebnisse eintragen <br />
+            - TWZ berechnen<br>
+            &nbsp;
+        </div>
+
+        <div class="w3-quarter">
+            <img src="../static/image019.png"><br /><h4>Reporting</h4><br />
+            - Rangliste<br>
+            - weitere Auswertungen <br />
+
+            &nbsp;
+        </div>
+    </div>
+
+
+    
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <div class="panel">
+        <footer class="card">
+            <center>
+                <h2>Anleitung:</h2>
+                <p>
+                    localhost:17102/ muss gestartet sein.<br>
+                    dazu ist ein Programmaufruf von TWZ_Tool.exe erforderlich<br>
+                    Online Verbindung erforderlich.<br>
+                    Tipp: prüfe das aktuelle Datum in Zeile 5 <br />
+                    <center><H5>ARM-Tools - Andreé Rosenkranz 2021</H5></center>
+                </p>
+            </center>
+        </footer>
+    </div>
+    <br>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>

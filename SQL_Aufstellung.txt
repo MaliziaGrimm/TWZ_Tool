@@ -1,0 +1,23 @@
+    engine = create_engine('sqlite:///daten/spieler.db')
+    metadata = MetaData()
+    metadata.bind = engine
+    spieler = Table('spieler', metadata, 
+    Column('id', Integer, primary_key=True),
+    Column('name', Text),
+    Column('vorname', Text),
+    Column('aktiv', Text), 
+    Column('spielernummer', Integer),
+    Column('datumab', Text),
+    Column('ak', Text),
+    Column('verein', Text),
+    Column('email', Text),
+    Column('mobil', Text),
+    Column('geburtsdatum', Text),
+    Column('uwgprivat', Text),
+    )
+    wertzahl = Table('wertzahl', metadata,
+    Column('id', Integer, primary_key=True),
+    Column('spielernummer', Integer),
+    Column('wertzahl', Integer),
+    )
+    metadata.create_all()

@@ -1,0 +1,238 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<title>{{v_version_titel}}</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="../static/twzico.ico" type="image/x-icon" />
+<link rel="stylesheet" href="../static/w3.css">
+<link rel="stylesheet" href="../static/bootstrap.min.css">
+<link rel="stylesheet" href="../static/dna-theme.css">
+<link rel="stylesheet" href="../static/format.css">
+
+
+</head>
+
+<body>
+
+<!-- Header -->
+
+<div class="w3-row-padding">
+  <header class="card">
+    <center><h3>{{v_version_program}}</h3></center>
+  </header>
+</div>
+<br>
+<!--Navigation-->
+<div class="w3-container">
+
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link " href="/">Home</a>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Spieler</a>
+            <div class="dropdown-menu">
+
+                <a class="dropdown-item" href="spieler.html">anlegen</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="spieleraktivieren.html">de- oder aktivierenn</a>
+                <a class="dropdown-item" href="spielerverwalten.html">verwalten</a>
+                <a class="dropdown-item" href="spielerkopieren.html">kopieren</a>
+                <a class="dropdown-item" href="spielerloeschen.html">löschen</a>
+            </div>
+        </li>
+
+    </ul>
+</div>
+<br>
+
+<div class="w3-row-padding">
+  <div class="w3-row-padding">
+    <br>
+    <form action = "http://localhost:17102/spieler.html" class="w3-container w3-card-4 w3-round", method = "POST">
+    <div class="w3-third">
+      <h3>Neuanlage</h3>
+    </div>
+    <div class="w3-third">
+      <h3>Spielerstammdaten:</h3>
+    </div>
+    <div class="w3-third">
+    <br>
+      <input class="w3-input w3-border-red w3-pale-yellow" type="text" name="form_spielernummer", placeholder="Spieler ID" required style="width:50%" maxlength="5">
+      <br>
+    </div>
+
+    
+    <div class="w3-row w3-container">
+      <div class="w3-half">
+        <div class="w3-row-padding"> 
+          <div class="w3-col l2 w3-left">
+            <p><label>Name </label></p>
+          </div>
+          <input class="w3-col l4 w3-input w3-pale-yellow w3-border" type="text" name="form_name", required maxlength="50">
+          <div class="w3-col l2 w3-left">
+            <p><label>Vorname</label></p>
+          </div>
+          <input class="w3-col l4 w3-input  w3-border" type="text" name="form_vorname", maxlength="50">
+        </div>
+      </div>
+      <div class="w3-half">
+        <div class="w3-row-padding"> 
+          <div class="w3-col l4 w3-left">
+            <p><label>Turnierwertzahl</label></p>
+          </div>
+          <input class="w3-col l2 w3-input w3-pale-yellow w3-border" type="text" name="form_twz", required maxlength="4">
+          <div class="w3-col l3 w3-left">
+            <p><label>Eintrittsdatum</label></p>
+          </div>
+          <input class="w3-col l3 w3-input w3-pale-yellow w3-border" type="date" name="form_eintrittsdatum", required>
+      </div>        
+    </div>
+  </div>
+
+
+  <h3>freiwillige Angaben</h3>  
+  <div class="w3-row w3-container">
+    <div class="w3-half">
+      <div class="w3-row-padding">
+        <div class="w3-col l6 w3-left">
+          <p><label>&NonBreakingSpace;</label></p>
+        </div>
+        <div class="w3-col l4 w3-left">
+          <p><label>Altersklasse</label></p>
+        </div>
+
+        <select class="form-control w3-col l2 w3-input w3-border" type="text" name="form_ak">
+          <option value="keine Angabe">keine Angabe</option>
+          <option value="Ü60">Ü60</option>
+          <option value="U18">U18</option>
+          <option value="U16">U16</option>
+          <option value="U14">U14</option>
+          <option value="U12">U12</option>
+          <option value="U10">U10</option>
+          <option value="U8">U8</option>
+        </select>
+      </div>
+    </div>
+    <div class="w3-half">
+      <div class="w3-row-padding">
+        <div class="w3-col l2 w3-left">
+          <p><label>Verein</label></p>
+        </div>
+        <select class="form-comtrol w3-col l4 w3-input w3-border" type="text" name="form_verein">
+          <option value="Weissblau Allianz Leipzig">Weissblau Allianz</option>
+          <option value="Gast">Gast</option>
+        </select>
+        <div class="w3-col l3 w3-left">
+          <p><label>Geburtsdatum</label></p>
+        </div>
+        <input class="w3-col l3 w3-input w3-border" type="date" name="form_geburtsdatum">
+      </div>
+    </div>
+  </div>
+<br>
+
+
+
+
+<div class="w3-row w3-container">
+  <div class="w3-half">
+    <div class="w3-row-padding"> 
+      <div class="w3-col l2 w3-left">
+        <p><label>Telefon </label></p>
+      </div>
+      <input class="w3-col l4 w3-input w3-border" type="text" name="form_telefon", maxlength="50">
+      <div class="w3-col l2 w3-left">
+        <p><label>Mobil</label></p>
+      </div>
+      <input class="w3-col l4 w3-input w3-border" type="text" name="form_mobil", maxlength="50">
+    </div>
+  </div>
+  <div class="w3-half">
+    <div class="w3-row-padding"> 
+      <div class="w3-col l2 w3-left">
+        <p><label>E-Mail</label></p>
+      </div>
+      <input class="w3-col l4 w3-input w3-border" type="text" name="form_email", maxlength="50">
+      <div class="w3-col l4 w3-left">
+        <p><label>Kontakt erlaubt</label></p>
+      </div>
+      <select class="form-comtrol w3-col l2 w3-input w3-border" type="text" name="form_uwgprivat">
+        <option value="Nein" selected>nein</option>
+        <option value="Ja">ja</option>
+      </select>
+    </div>        
+  </div>
+</div>
+
+<br><br>
+    
+</div>
+<br>
+</div>
+  
+</div> 
+
+<div class="w3-third">    
+    <center>
+    <input type = "submit" button class="btn btn-primary" value = "speichern"/>
+    </center><br>
+  </div>
+
+  <div class="w3-third">&NonBreakingSpace;</div>    
+  
+  <div class="w3-third">  
+    <center>
+    <input type="reset" button class="btn btn-default" value="verwerfen">
+    </center>
+  </div><br>
+  </form>
+</div>
+
+
+
+
+<div class="w3-row-padding">
+
+
+
+<div class="w3-row-padding">
+<div class="w3-card">
+  <form class="w3-container w3-card-4 w3-round">
+  <h3>Spielerliste</h3>
+ 
+    <div class="w3-row-padding">
+ 
+  <table>
+    <tr>
+      <th>ID</th><th>Spielernummer</th>	<th>Name</th>	<th>Vorname</th>	<th>TWZ</th>	<th>AK</th> <th>Verein</th>
+    </tr>
+
+    {% for zeile in tabelle %}
+    <tr>
+        {% for zelle in zeile %}
+        <td>{{ zelle }}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+  </table>
+  <br>
+
+<br>
+<div id="footer">
+
+<p><center><H5>ARM-Tools - Andreé Rosenkranz 2021</H5></center></p>
+
+</div>
+</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>

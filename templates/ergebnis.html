@@ -1,0 +1,402 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<title>{{v_version_titel}}</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="../static/bewerber.ico" type="image/x-icon" />
+<link rel="stylesheet" href="../static/w3.css">
+<link rel="stylesheet" href="../static/bootstrap.min.css">
+<link rel="stylesheet" href="../static/dna-theme.css">
+<link rel="stylesheet" href="../static/format.css">
+<!-- fertig 26.12.2020 -->
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <div class="w3-row-padding">
+        <header class="card">
+            <center><h3>{{v_version_program}}</h3></center>
+        </header>
+    </div>
+    <br>
+
+    <!--Navigation-->
+    <div class="w3-container">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Runden</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="rundeneu.html">Runde neu</a>
+                    <a class="dropdown-item" href="ergebnis.html">Ergebnis eintragen</a>
+                    <a class="dropdown-item" href="rundebeenden.html">Runde beenden</a>
+                </div>
+            </li>
+            <!-- Navigation nur Home -->
+        </ul>
+    </div>
+
+    <br>
+
+    <div class="w3-row-padding">
+        <br>
+        <form action="http://localhost:17102/ergebnis.html" class="w3-container w3-card-4 w3-round" , method="POST">
+            <div class="w3-third">
+                <h3>&nbsp;</h3>
+                <br>
+            </div>
+
+            <div class="w3-third">
+                <center><h3>Ergebnisse erfassen</h3></center>
+            </div>
+            
+            <div class="w3-third">
+                <h3>&nbsp;</h3>
+
+            </div>
+
+            <div class="w3-row-padding">
+                <div class="w3-quarter">
+                    <h3>&nbsp;</h3>
+                </div>
+
+                <div class="w3-half w3-card-4 w3-round">
+                    <br />
+                    <div class="w3-container">
+                        <div class="w3-col l2 w3-left">
+                            <p><label>Brett 1</label></p>
+                        </div>
+
+                        <input class="w3-col l3 w3-border" type="text" name="form_brett1w" value="{{twz_brett1w}}" readonly>
+
+                        <div class="w3-col l1">
+                            <center>&nbsp;-&nbsp;</center>
+                        </div>
+
+                        <input class="w3-col l3 w3-border w3-left" type="text" name="form_brett1s" readonly>
+                        <div class="w3-col l1">
+                            <center>&nbsp;=&nbsp;</center>
+                        </div>
+
+                        <!-- <input class="w3-col l2 w3-input w3-border" type="text" name="form_erg1" maxlength="1"> -->
+
+                        <select class="form-control w3-col l2 w3-input w3-border" type="text" name="form_erg1">
+                            <option value="{{r_geschlecht}}">{{r_geschlechttext}}</option>
+                            <option value="1">1 : 0</option>
+                            <option value="0">0 : 1</option>
+                            <option value="5">Remis</option>
+                            <option value="9">offen</option>
+                        </select>
+                    </div>
+
+                    <div class="w3-container">
+                        <div class="w3-col l2 w3-left">
+                            <p><label>Brett 2</label></p>
+                        </div>
+
+                        <input class="w3-col l3 w3-border" type="text" name="form_brett2w" readonly>
+
+                        <div class="w3-col l1">
+                            <center>&nbsp;-&nbsp;</center>
+                        </div>
+
+                        <input class="w3-col l3 w3-border w3-left" type="text" name="form_brett2s" readonly>
+                        <div class="w3-col l1">
+                            <center>&nbsp;=&nbsp;</center>
+                        </div>
+
+                        <select class="form-control w3-col l2 w3-input w3-border" type="text" name="form_erg2">
+                            <option value="{{r_geschlecht}}">{{r_geschlechttext}}</option>
+                            <option value="1">1 : 0</option>
+                            <option value="0">0 : 1</option>
+                            <option value="5">Remis</option>
+                            <option value="9">offen</option>
+                        </select>
+                    </div>
+
+                    <div class="w3-container">
+                        <div class="w3-col l2 w3-left">
+                            <p><label>Brett 3</label></p>
+                        </div>
+
+                        <input class="w3-col l3 w3-border" type="text" name="form_brett3w">
+
+                        <div class="w3-col l1">
+                            <center>&nbsp;-&nbsp;</center>
+                        </div>
+
+                        <input class="w3-col l3 w3-border w3-left" type="text" name="form_brett3s">
+                        <div class="w3-col l1">
+                            <center>&nbsp;=&nbsp;</center>
+                        </div>
+
+                        <select class="form-control w3-col l2 w3-input w3-border" type="text" name="form_erg3">
+                            <option value="{{r_geschlecht}}">{{r_geschlechttext}}</option>
+                            <option value="1">1 : 0</option>
+                            <option value="0">0 : 1</option>
+                            <option value="5">Remis</option>
+                            <option value="9">offen</option>
+                        </select>
+
+                    </div>
+
+                    <div class="w3-container">
+
+                        <div class="w3-col l2 w3-left">
+                            <p><label>Brett 4</label></p>
+                        </div>
+
+                        <input class="w3-col l3 w3-border" type="text" name="form_brett4w">
+
+                        <div class="w3-col l1">
+                            <center>&nbsp;-&nbsp;</center>
+                        </div>
+
+                        <input class="w3-col l3 w3-border w3-left" type="text" name="form_brett4s">
+                        <div class="w3-col l1">
+                            <center>&nbsp;=&nbsp;</center>
+                        </div>
+
+                        <select class="form-control w3-col l2 w3-input w3-border" type="text" name="form_erg4">
+                            <option value="{{r_geschlecht}}">{{r_geschlechttext}}</option>
+                            <option value="1">1 : 0</option>
+                            <option value="0">0 : 1</option>
+                            <option value="5">Remis</option>
+                            <option value="9">offen</option>
+                        </select>
+
+                    </div>
+
+                    <div class="w3-container">
+                        <div class="w3-col l2 w3-left">
+                            <p><label>Brett 5</label></p>
+                        </div>
+
+                        <input class="w3-col l3 w3-border" type="text" name="form_brett5w">
+
+                        <div class="w3-col l1">
+                            <center>&nbsp;-&nbsp;</center>
+                        </div>
+
+                        <input class="w3-col l3 w3-border w3-left" type="text" name="form_brett5s">
+                        <div class="w3-col l1">
+                            <center>&nbsp;=&nbsp;</center>
+                        </div>
+
+                        <select class="form-control w3-col l2 w3-input w3-border" type="text" name="form_erg5">
+                            <option value="{{r_geschlecht}}">{{r_geschlechttext}}</option>
+                            <option value="1">1 : 0</option>
+                            <option value="0">0 : 1</option>
+                            <option value="5">Remis</option>
+                            <option value="9">offen</option>
+                        </select>
+                    </div>
+
+                    <div class="w3-container">
+                        <div class="w3-col l2 w3-left">
+                            <p><label>Brett 6</label></p>
+                        </div>
+
+                        <input class="w3-col l3 w3-border" type="text" name="form_brett6w">
+
+                        <div class="w3-col l1">
+                            <center>&nbsp;-&nbsp;</center>
+                        </div>
+
+                        <input class="w3-col l3  w3-border w3-left" type="text" name="form_brett6s">
+                        <div class="w3-col l1">
+                            <center>&nbsp;=&nbsp;</center>
+                        </div>
+
+                        <select class="form-control w3-col l2 w3-input w3-border" type="text" name="form_erg6">
+                            <option value="{{r_geschlecht}}">{{r_geschlechttext}}</option>
+                            <option value="1">1 : 0</option>
+                            <option value="0">0 : 1</option>
+                            <option value="5">Remis</option>
+                            <option value="9">offen</option>
+                        </select>
+                    </div>
+
+                    <div class="w3-container">
+                        <div class="w3-col l2 w3-left">
+                            <p><label>Brett 7</label></p>
+                        </div>
+
+                        <input class="w3-col l3 w3-border" type="text" name="form_brett7w">
+
+                        <div class="w3-col l1">
+                            <center>&nbsp;-&nbsp;</center>
+                        </div>
+
+                        <input class="w3-col l3 w3-border w3-left" type="text" name="form_brett7s">
+                        <div class="w3-col l1">
+                            <center>&nbsp;=&nbsp;</center>
+                        </div>
+
+                        <select class="form-control w3-col l2 w3-input w3-border" type="text" name="form_erg7">
+                            <option value="{{r_geschlecht}}">{{r_geschlechttext}}</option>
+                            <option value="1">1 : 0</option>
+                            <option value="0">0 : 1</option>
+                            <option value="5">Remis</option>
+                            <option value="9">offen</option>
+                        </select>
+
+                    </div>
+
+                    <div class="w3-container">
+                        <div class="w3-col l2 w3-left">
+                            <p><label>Brett 8</label></p>
+                        </div>
+
+                        <input class="w3-col l3  w3-border" type="text" name="form_brett8w">
+
+                        <div class="w3-col l1">
+                            <center>&nbsp;-&nbsp;</center>
+                        </div>
+
+                        <input class="w3-col l3  w3-border w3-left" type="text" name="form_brett8s">
+                        <div class="w3-col l1">
+                            <center>&nbsp;=&nbsp;</center>
+                        </div>
+
+                        <select class="form-control w3-col l2 w3-input w3-border" type="text" name="form_erg8">
+                            <option value="{{r_geschlecht}}">{{r_geschlechttext}}</option>
+                            <option value="1">1 : 0</option>
+                            <option value="0">0 : 1</option>
+                            <option value="5">Remis</option>
+                            <option value="9">offen</option>
+                        </select>
+
+                    </div>
+
+                    <div class="w3-container">
+                        <div class="w3-col l2 w3-left">
+                            <p><label>Brett 9</label></p>
+                        </div>
+
+                        <input class="w3-col l3 w3-border" type="text" name="form_brett9w">
+
+                        <div class="w3-col l1">
+                            <center>&nbsp;-&nbsp;</center>
+                        </div>
+
+                        <input class="w3-col l3 w3-border w3-left" type="text" name="form_brett9s">
+                        <div class="w3-col l1">
+                            <center>&nbsp;=&nbsp;</center>
+                        </div>
+
+                        <select class="form-control w3-col l2 w3-input w3-border" type="text" name="form_erg9">
+                            <option value="{{r_geschlecht}}">{{r_geschlechttext}}</option>
+                            <option value="1">1 : 0</option>
+                            <option value="0">0 : 1</option>
+                            <option value="5">Remis</option>
+                            <option value="9">offen</option>
+                        </select>
+
+                    </div>
+
+                    <div class="w3-container">
+                        <div class="w3-col l2 w3-left">
+                            <p><label>Brett 10</label></p>
+
+                        </div>
+
+                        <input class="w3-col l3 w3-border" type="text" name="form_brett10w">
+
+                        <div class="w3-col l1">
+                            <center>&nbsp;-&nbsp;</center>
+                        </div>
+
+                        <input class="w3-col l3  w3-border w3-left" type="text" name="form_brett10s">
+                        <div class="w3-col l1">
+                            <center>&nbsp;=&nbsp;</center>
+                        </div>
+
+                        <select class="form-control w3-col l2 w3-input w3-border" type="text" name="form_erg10">
+                            <option value="{{r_geschlecht}}">{{r_geschlechttext}}</option>
+                            <option value="1">1 : 0</option>
+                            <option value="0">0 : 1</option>
+                            <option value="5">Remis</option>
+                            <option value="9">offen</option>
+                        </select>
+                    </div>
+
+                    <div class="w3-quarter">
+                        <h3>&nbsp;</h3>
+                    </div>
+                </div>
+            </div>
+            <br />
+    </div>
+    <br>
+
+    <div class="w3-row-padding">
+        <div class="w3-third">
+            <center><input type="submit" button class="btn btn-primary" value="speichern" /></center><br>
+        </div>
+
+        <div class="w3-third">&NonBreakingSpace;</div>
+        <div class="w3-third">
+            <center><input type="reset" button class="btn btn-default" value="verwerfen"></center>
+        </div>
+        <br>
+    </div>
+
+    </form>
+
+
+
+
+
+
+    <div class="w3-row-padding">
+        <div class="w3-card">
+            <form class="w3-container w3-card-4 w3-round">
+                <h3>Spielerübersicht</h3>
+                <br>
+                <div class="w3-row-padding">
+                    <table>
+                        <tr>
+                            <th>Spielernummer</th>
+                            <th>Name</th>
+                            <th>Vorname</th>
+                            <th>Wertzahl</th>
+                            <th>letzter Gegner</th>
+                            <th>vorletzter Gegner</th>
+                            <th>drittletzter Gegner</th>
+                            <th>Partien mit W</th>
+                            <th>Partien mit S</th>
+                            <th>Partien Spielfrei</th>
+                        </tr>
+
+                        {% for zeile in tabelle %}
+                        <tr>
+                            {% for zelle in zeile %}
+                            <td>{{ zelle }}</td>
+                            {% endfor %}
+                        </tr>
+                        {% endfor %}
+                    </table>
+                    <br><br>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br><br><br><br>
+
+    <div id="footer">
+        <p><center><H5>ARM-Tools - 2020/2021</H5></center></p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>

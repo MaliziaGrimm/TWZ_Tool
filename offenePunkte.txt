@@ -1,0 +1,5 @@
+Spieler verwalten ist Spieler aktivieren/deaktivieren
+
+was ist wenn DB leer und es geht Speielr aktiveiren - testen
+
+spielfrei gerade gehts nicht
